@@ -131,4 +131,15 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-background-light);
   color: var(--color-brand-dark);
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23342D26' d='M7 2l12 11.5-5.5 1 3.5 7-2.5 1.5-3.5-7L7 19z'/%3E%3Cpath fill='%23F26640' d='M8 4l9 8.5-4 .5 3 6-1 .5-3-6-4 2.5z'/%3E%3C/svg%3E"), auto;
+}
+
+/* Custom cursor for interactive elements */
+a, button, [role="button"], input[type="submit"], input[type="button"], .cursor-pointer {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24'%3E%3Cpath fill='%23342D26' d='M12 2L4 12h5v8h6v-8h5z'/%3E%3Cpath fill='%23F8562B' d='M12 4l-6 8h4v6h4v-6h4z'/%3E%3C/svg%3E") 12 4, pointer;
+}
+
+/* Active/clicking state */
+a:active, button:active, [role="button"]:active {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23342D26' d='M12 4L6 12h4v6h4v-6h4z'/%3E%3Cpath fill='%23D94435' d='M12 5l-5 7h3v5h4v-5h3z'/%3E%3C/svg%3E") 12 4, pointer;
 }
