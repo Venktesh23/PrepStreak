@@ -30,6 +30,9 @@
   --color-brand-green-onboarding: #006442;
   --color-brand-brown: #4a2c2a;
 
+  /* Results page colors */
+  --color-brand-dark-green: #294432;
+
   /* Font families */
   --font-display: "Paytone One", sans-serif;
   --font-body: "Lexend", sans-serif;
@@ -83,6 +86,14 @@
   background-image:
     linear-gradient(to right, #f2994a40 1px, transparent 1px),
     linear-gradient(to bottom, #f2994a40 1px, transparent 1px);
+  background-size: 2rem 2rem;
+}
+
+.grid-bg-results {
+  background-color: #FDF9EC;
+  background-image:
+    linear-gradient(to right, rgba(242, 100, 64, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 100, 64, 0.4) 1px, transparent 1px);
   background-size: 2rem 2rem;
 }
 

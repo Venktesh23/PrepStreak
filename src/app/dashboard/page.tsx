@@ -5,12 +5,12 @@ import { Logo } from "@/components/ui/Logo";
 
 export default function DashboardPage() {
   return (
-    <div className="relative flex h-auto min-h-screen w-full flex-col bg-theme-bg overflow-x-hidden orange-grid-bg">
+    <div className="relative flex h-auto min-h-screen w-full flex-col bg-background-light overflow-x-hidden grid-bg-orange">
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
             {/* Header */}
-            <header className="flex items-center justify-between whitespace-nowrap bg-theme-bg border-b-4 border-solid border-theme-dark-text px-4 sm:px-10 py-3">
+            <header className="flex items-center justify-between whitespace-nowrap bg-background-light border-b-4 border-solid border-theme-dark-text px-4 sm:px-10 py-3">
               <div className="flex items-center gap-4 text-theme-dark-text">
                 <div className="size-6 text-theme-orange">
                   <Logo className="size-6" />
