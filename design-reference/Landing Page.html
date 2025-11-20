@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepStreak - Master DSA One Streak at a Time</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&amp;family=Lexend:wght@400;500;700;900&amp;family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F8562B",
+                        "background-light": "#FFF7E8",
+                        "background-dark": "#101122",
+                        "brand-red": "#EF4444",
+                        "brand-dark": "#1F2937",
+                        "brand-green": "#22543d"
+                    },
+                    fontFamily: {
+                        "display": ["Paytone One", "sans-serif"],
+                        "body": ["Lexend", "sans-serif"],
+                        "handwriting": ["Kalam", "cursive"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'chunky': '4px 4px 0px #1F2937',
+                        'chunky-hover': '6px 6px 0px #1F2937'
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            @apply font-body bg-background-light text-brand-dark;
+            background-image:
+                linear-gradient(rgba(248, 86, 43, 0.1) 1px, transparent 1px),
+                linear-gradient(to right, rgba(248, 86, 43, 0.1) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-5xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-6 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-brand-dark text-2xl font-display leading-tight tracking-[-0.015em] uppercase">PrepStreak</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 border-2 border-brand-dark bg-transparent text-brand-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-dark hover:text-white transition-colors">
+<span class="truncate">Login</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors border-2 border-brand-dark shadow-chunky hover:shadow-chunky-hover">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center py-16 sm:py-24 text-center">
+<div class="flex flex-col gap-8 items-center">
+<h1 class="font-display text-primary uppercase text-5xl sm:text-6xl md:text-7xl font-black leading-tight tracking-[-0.033em] max-w-4xl" style="text-shadow: 2px 2px 0px #FFF7E8, 4px 4px 0px #1F2937;">
+                                Master DSA One Streak at a Time
+                            </h1>
+<div class="relative flex flex-col gap-2 rounded-lg p-6 bg-background-light items-center border-2 border-brand-dark min-w-[200px]">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-sm font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+        Score
+    </div>
+<p class="text-brand-dark/80 text-base font-bold leading-normal uppercase tracking-widest">Current Streak</p>
+<p class="text-primary font-display tracking-tight text-6xl sm:text-7xl font-bold leading-tight">365</p>
+<div class="w-full h-4 bg-gray-200 rounded-full overflow-hidden border border-brand-dark">
+<div class="h-full bg-green-500" style="width: 85%;"></div>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 sm:h-14 sm:px-8 bg-primary text-white text-base sm:text-xl font-bold leading-normal tracking-[0.015em] hover:scale-105 transition-transform border-2 border-brand-dark shadow-chunky hover:shadow-chunky-hover font-display uppercase">
+<span class="truncate">Start Your Journey</span>
+</button>
+<div class="relative">
+<p class="font-handwriting text-brand-green text-xl sm:text-2xl font-bold leading-normal -rotate-3">
+                                Join 10,000+ coders on their journey to mastery.
+                            </p>
+<span class="material-symbols-outlined text-brand-red absolute -top-4 -right-8 text-5xl rotate-12">recommend</span>
+</div>
+</div>
+</main>
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="font-display uppercase text-primary tracking-light text-4xl sm:text-5xl font-bold leading-tight max-w-2xl">
+                                Why PrepStreak?
+                            </h2>
+<p class="text-brand-dark/80 text-base font-normal leading-normal max-w-2xl font-body">
+                                Everything you need to succeed in your DSA preparation, gamified for motivation and consistency.
+                            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0 mt-6">
+<div class="flex flex-1 gap-4 rounded-lg border-2 border-brand-dark bg-background-light p-6 flex-col items-start text-left shadow-chunky transition-transform hover:-translate-y-1 hover:rotate-[-2deg] transform-gpu">
+<img alt="Gamified learning illustration" class="w-20 h-20 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZdsPtSZlR2VGbes0SUgMKvgW6QkGRCR0_jlmvIYpq0BZNTjMN0stkf1R4UQV450TIRAvYxKdjI_Psr48QsJPdEXIHV5SsZ-YsxwXJq-FSAdalptsY47jfFznAn3ojXeiIR_ttLL61SQBvP5tCEwqrx5P4o_Jhs02-hdhhgQe4j3q0xmxfq8_kmwkhLsFvuO3sdbK09elxD8QRWCV46acEg6Tbt7nJXQQm3Ms2d69YSbeEz3m87zPb60P2z41sxM9H363Rn67Y1_0"/>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-brand-dark text-xl font-bold leading-tight">Gamified Learning</h3>
+<p class="font-handwriting text-brand-dark/80 text-lg font-normal leading-normal">Tackle complex topics through engaging challenges and levels.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border-2 border-brand-dark bg-background-light p-6 flex-col items-start text-left shadow-chunky transition-transform hover:-translate-y-1 hover:rotate-[1deg] transform-gpu">
+<img alt="Daily quiz illustration" class="w-20 h-20 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMLB7kubm4pottSeTzVWqCAiCs-6lzQ5Ci-2-hkP1HwvdHhdEy64-35Ra2UVWsX9eEe_6dq_4DfpyO-g2jH0gyhRlMTQh1VqMbvzCsHu6jCoyQkrZJaT7GILfktpD4zyzc4mCbjjk6uy97IQf04KCox8cp9PEolJJvVJSfu2qNLDJkmNYqPaUVDz0JJjC8jcR6ZWDyEbrZOOxLpgFOx0lSPDyc4qgZnh_drOHtpZagyop44iBYahBcTE1kJSeOXckNM-3vMTofchs"/>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-brand-dark text-xl font-bold leading-tight">5-min Daily Quizzes</h3>
+<p class="font-handwriting text-brand-dark/80 text-lg font-normal leading-normal">Build a consistent practice habit with quick, bite-sized daily tests.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border-2 border-brand-dark bg-background-light p-6 flex-col items-start text-left shadow-chunky transition-transform hover:-translate-y-1 hover:rotate-[-1.5deg] transform-gpu">
+<img alt="AI hint illustration" class="w-20 h-20 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpUVH5OwJDT59EsWrfoxOtM8j9FgW_LRVvnIKcqP7IlgRaMDd1ZTRT4OHcAW4H_C8iWOHd-xCHHw_7Xq_W0rHCE6ZEKQI5Jt2Q0a0ZTHhqMjVYTQbPmfm7JU0dpe0ICCAkM8KnV7ijyyAEwPkJcnIcprVc_rr9lUiu9PNpqd-cWorys5Zlbjuj4dqtc2wP-YeU1gdJEuEq_g2-4vXbXwol3MEdOgOLbFg8XoCU5U6JjIrRy1e6gHQfy2sL_10kdqlcuwM0QgiWvlA"/>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-brand-dark text-xl font-bold leading-tight">AI-Powered Hints</h3>
+<p class="font-handwriting text-brand-dark/80 text-lg font-normal leading-normal">Get intelligent support and explanations whenever you're stuck.</p>
+</div>
+</div>
+</div>
+</div>
+<footer class="flex flex-col gap-8 px-5 py-10 text-center border-t-2 border-solid border-brand-dark mt-10">
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+<a class="text-brand-dark/80 hover:text-primary transition-colors text-base font-bold leading-normal" href="#">Features</a>
+<a class="text-brand-dark/80 hover:text-primary transition-colors text-base font-bold leading-normal" href="#">Pricing</a>
+<a class="text-brand-dark/80 hover:text-primary transition-colors text-base font-bold leading-normal" href="#">Contact</a>
+<a class="text-brand-dark/80 hover:text-primary transition-colors text-base font-bold leading-normal" href="#">Privacy Policy</a>
+</div>
+<p class="text-brand-dark/60 text-sm font-normal leading-normal">© 2024 PrepStreak. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

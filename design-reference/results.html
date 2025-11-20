@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepStreak - Algorithm Arcade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --brand-cream: #FDF9EC;
+                --brand-orange: #F26440;
+                --brand-dark-green: #294432;
+                --brand-red: #E2412B;
+            }
+        }
+        @layer utilities {
+            .grid-bg {
+                background-color: var(--brand-cream);
+                background-image:
+                    linear-gradient(to right, rgba(242, 100, 64, 0.4) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(242, 100, 64, 0.4) 1px, transparent 1px);
+                background-size: 2rem 2rem;
+            }
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class", // Keep dark mode config for potential future use, but styles are light-themed for now
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6467f2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101122",
+                        "brand-cream": "var(--brand-cream)",
+                        "brand-orange": "var(--brand-orange)",
+                        "brand-dark-green": "var(--brand-dark-green)",
+                        "brand-red": "var(--brand-red)",
+                    },
+                    fontFamily: {
+                        "display": ["Fredoka One", "cursive"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'chunky': '4px 4px 0px #000',
+                        'chunky-hover': '6px 6px 0px #000',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+            font-size: inherit;}
+        .stamp-effect {
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body class="grid-bg font-sans text-brand-dark-green">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+<div class="w-full max-w-2xl">
+<div class="flex flex-col gap-6 rounded-lg border-4 border-brand-red bg-brand-cream p-6 shadow-chunky sm:p-8">
+<div class="relative text-center">
+<h1 class="font-display text-4xl font-normal uppercase italic tracking-wide text-brand-dark-green sm:text-5xl md:text-6xl">Quiz Complete!</h1>
+<p class="mt-4 font-display text-2xl font-normal text-brand-dark-green">Score: 4/5</p>
+<div class="mt-2 flex justify-center text-5xl text-yellow-400">
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined text-gray-300" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<div class="absolute -left-8 -top-8 -rotate-[25deg] text-5xl sm:-left-12 sm:-top-12">
+                👾
+            </div>
+<div class="absolute -right-8 -top-8 rotate-[25deg] text-5xl sm:-right-12 sm:-top-12">
+                🕹️
+            </div>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="flex flex-1 basis-full flex-col items-center justify-center gap-1 rounded-lg border-2 border-brand-dark-green bg-blue-300 p-4 shadow-chunky sm:basis-0">
+<p class="font-display text-5xl font-normal tracking-light text-brand-dark-green">+50</p>
+<p class="text-sm font-bold uppercase text-brand-dark-green">XP Earned</p>
+</div>
+<div class="flex flex-1 basis-full flex-col items-center justify-center gap-1 rounded-lg border-2 border-brand-dark-green bg-pink-300 p-4 shadow-chunky sm:basis-0">
+<p class="font-display text-5xl font-normal tracking-light text-brand-dark-green">3:45</p>
+<p class="text-sm font-bold uppercase text-brand-dark-green">Time Taken</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+<div class="relative">
+<div class="stamp-effect absolute -left-2 -top-4 flex items-center justify-center rounded-full bg-green-500 p-2 text-white">
+<span class="material-symbols-outlined text-3xl">check</span>
+</div>
+<h3 class="mb-3 text-xl font-bold tracking-tight text-brand-dark-green">Correct Topics</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="text-lg text-green-600">✅</span>
+<span class="text-base font-medium text-brand-dark-green/90">Arrays</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-lg text-green-600">✅</span>
+<span class="text-base font-medium text-brand-dark-green/90">Time Complexity</span>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="stamp-effect absolute -left-2 -top-4 flex items-center justify-center rounded-full bg-yellow-500 p-2 text-white">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="mb-3 text-xl font-bold tracking-tight text-brand-dark-green">Review This:</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="text-lg">📚</span>
+<span class="text-base font-medium text-brand-dark-green/90">Space Complexity</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-4 flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+<button class="w-full rounded-lg border-2 border-brand-dark-green bg-gray-300 px-8 py-3 text-center font-display text-lg font-normal uppercase text-brand-dark-green shadow-chunky transition-all hover:shadow-chunky-hover active:translate-x-1 active:translate-y-1 active:shadow-none sm:w-auto">
+                        Try Again
+                    </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-brand-dark-green bg-brand-dark-green px-8 py-3 text-center font-display text-lg font-normal uppercase text-white shadow-chunky transition-all hover:shadow-chunky-hover active:translate-x-1 active:translate-y-1 active:shadow-none sm:w-auto">
+                        Continue
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

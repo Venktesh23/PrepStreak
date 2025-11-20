@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PrepStreak Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --theme-bg: #FDF9F0;
+                --theme-orange: #F26640;
+                --theme-green: #3D5C4D;
+                --theme-red: #D94435;
+                --theme-dark-text: #342D26;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .orange-grid-bg {
+            background-color: var(--theme-bg);
+            background-image: linear-gradient(var(--theme-orange) 1px, transparent 1px), linear-gradient(to right, var(--theme-orange) 1px, var(--theme-bg) 1px);
+            background-size: 2rem 2rem;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6467f2",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101122",
+              "theme-bg": "var(--theme-bg)",
+              "theme-orange": "var(--theme-orange)",
+              "theme-green": "var(--theme-green)",
+              "theme-red": "var(--theme-red)",
+              "theme-dark-text": "var(--theme-dark-text)",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"],
+              "heading": ["Krona One", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            boxShadow: {
+                'retro': '4px 4px 0px #342D26',
+                'retro-sm': '2px 2px 0px #342D26'
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-theme-bg group/design-root overflow-x-hidden orange-grid-bg">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap bg-theme-bg border-b-4 border-solid border-theme-dark-text px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-theme-dark-text">
+<div class="size-6 text-theme-orange">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-theme-green text-xl font-heading font-bold leading-tight tracking-[-0.015em]">PrepStreak</h2>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 w-10 bg-theme-green/10 text-theme-green hover:bg-theme-green/20 transition-colors duration-200">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 w-10 bg-theme-green/10 text-theme-green hover:bg-theme-green/20 transition-colors duration-200">
+<span class="material-symbols-outlined text-xl">bar_chart</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 w-10 bg-theme-green/10 text-theme-green hover:bg-theme-green/20 transition-colors duration-200">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+</div>
+</header>
+<main class="flex-1 p-4">
+<h1 class="text-theme-dark-text tracking-tight text-[48px] font-heading leading-tight px-4 text-left pb-3 pt-6 font-bold">Good morning, Arjun!</h1>
+<div class="p-4">
+<div class="flex flex-col md:flex-row items-stretch justify-between gap-6 rounded-md bg-theme-bg p-6 border-4 border-theme-dark-text shadow-retro">
+<div class="flex flex-col gap-2 flex-[2_2_0px]">
+<div class="flex items-center gap-3">
+<img alt="Illustrated flame character" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEvlcK8jQyfryuuzkgwrdrdBMM6yuNNpu0ZTbBx-z2351AX6H3-tP3sCz19lPmO7ENb7qGx0SzPSIwbWwYSrok9k5DoXa3h1f941cZYiDE22IKGJ-yHwzRaS4AIF2j4uAEb0yBk_GVIneEqW9w-1YdCH4ljMW5tXuwlhu8sAIjPIITEnyecScFvvP1UjGZW9JGbf0KEE4ZLsrjpogKwqVTX0HZC0OkqcmssM6QF-50WDzhyGluJQ3nTLmMmVW6omUMZXIjwr5k-rQ"/>
+<p class="text-2xl font-bold leading-tight text-theme-red font-heading">7 Day Streak!</p>
+</div>
+<p class="text-theme-dark-text/80 text-sm font-normal leading-normal">Keep it sizzling! Complete today's special to extend your streak.</p>
+<div class="flex flex-col gap-3 pt-4">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-theme-dark-text text-base font-bold leading-normal">XP Thermometer</p>
+<p class="text-theme-dark-text/80 text-sm font-normal leading-normal">450/500 XP</p>
+</div>
+<div class="rounded-full bg-theme-dark-text/20 h-4 w-full border-2 border-theme-dark-text p-0.5">
+<div class="h-full rounded-full bg-theme-red" style="width: 90%;"></div>
+</div>
+</div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1 md:max-w-xs border-2 border-theme-dark-text" data-alt="Abstract gradient of fiery oranges and yellows representing a streak" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsCVKilvIx86NE-MLtlyUmji_0UnzVBDng8MhYMneEws-xTG_qgnkTcZyFoAJGLmuXqlo24fPlgG2IeviSQ0NnnvEafOOnMfKRKkTLCJBbGmU7yaifNfkPLkJtzcaZyKRmLC0dnB_oJm7pL6JIq82rIFWeV-_yVj9at3U-8jHOH6QwrMW8vT2KUYYiWJcSDYixO31VcNZAseYJHr_gGaqKOGRPFFbQMjYsXGoDieVqerPslWdl9iqmxnOikCPgneR5P4dejWghrMw");'></div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 pt-4">
+<div class="lg:col-span-2">
+<h2 class="text-theme-dark-text text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-heading">Today's Special</h2>
+<div class="p-4">
+<div class="relative flex flex-col gap-4 rounded-md bg-theme-bg p-6 border-4 border-theme-dark-text shadow-retro">
+<div class="absolute -top-3 -left-3 rotate-[-12deg]"><svg class="text-theme-orange" fill="none" height="26" viewBox="0 0 34 26" width="34" xmlns="http://www.w3.org/2000/svg"><path d="M1.77701 10.999C2.08386 5.37257 6.47648 1.40194 12.1029 1.70879C17.7293 2.01564 21.6999 6.40826 21.4005 12.0347C21.101 17.6611 16.7084 21.6317 11.082 21.3249C5.45553 21.018 1.47016 16.6254 1.77701 10.999Z" fill="currentColor" stroke="#342D26" stroke-width="2"></path><path d="M12.3995 12.0347C12.6989 6.40826 17.0915 2.43763 22.718 2.74448C28.3444 3.05133 32.315 7.44395 32.0156 13.0704C31.7161 18.6968 27.3235 22.6674 21.6971 22.3606C16.0706 22.0537 12.1001 17.6611 12.3995 12.0347Z" fill="currentColor" stroke="#342D26" stroke-width="2"></path></svg></div>
+<p class="text-sm font-bold text-white py-1 px-3 bg-theme-green rounded-md self-start relative z-10 shadow-retro-sm border-2 border-theme-dark-text">Arrays &amp; Hashing</p>
+<div>
+<h3 class="text-theme-dark-text text-xl font-bold leading-tight mt-1">Two Sum Problem</h3>
+<p class="text-theme-dark-text/80 text-sm font-normal leading-normal mt-2">Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+</div>
+<div class="flex items-center gap-4 text-theme-dark-text mt-2">
+<div class="flex items-center gap-1.5 text-sm py-1 px-2.5 bg-theme-orange/20 rounded-md border-2 border-dashed border-theme-orange/50">
+<span class="material-symbols-outlined text-base">timer</span>
+<span>5 min</span>
+</div>
+<div class="flex items-center gap-1.5 text-sm py-1 px-2.5 bg-theme-orange/20 rounded-md border-2 border-dashed border-theme-orange/50">
+<span class="material-symbols-outlined text-base">local_fire_department</span>
+<span>50 XP</span>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-md h-12 px-6 bg-theme-green text-white text-base font-bold leading-normal w-full sm:w-auto self-start mt-4 hover:bg-theme-green/90 transition-colors duration-200 border-2 border-theme-dark-text shadow-retro-sm">
+<span>Start Quiz</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<h2 class="text-theme-dark-text text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 font-heading">Punch Card</h2>
+<div class="p-4">
+<div class="flex flex-col gap-4 rounded-md bg-theme-bg p-6 border-4 border-theme-dark-text shadow-retro">
+<p class="text-theme-dark-text font-bold">This Week</p>
+<div class="flex justify-between items-center text-center">
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">M</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-theme-green text-white border-2 border-theme-dark-text">✓</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">T</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-theme-green text-white border-2 border-theme-dark-text">✓</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">W</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-theme-green text-white border-2 border-theme-dark-text">✓</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">T</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-theme-green text-white border-2 border-theme-dark-text">✓</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm font-bold text-theme-dark-text">F</p>
+<div class="flex items-center justify-center size-9 rounded-full border-2 border-theme-dark-text bg-theme-orange/50 text-theme-dark-text font-bold">?</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">S</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-black/5 text-black/40 border-2 border-black/20"></div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<p class="text-sm text-theme-dark-text/60">S</p>
+<div class="flex items-center justify-center size-9 rounded-full bg-black/5 text-black/40 border-2 border-black/20"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
