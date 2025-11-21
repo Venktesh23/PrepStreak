@@ -360,14 +360,7 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Section 2: Today's Goal */}
-              <div className="text-center mt-8 animate-card">
-                <p className="text-lg text-theme-dark-text font-bold">
-                  Today&apos;s Goal: <span className="text-theme-orange">0/1</span> quiz completed ⭕
-                </p>
-              </div>
-
-              {/* Section 3: Daily Challenge Card (HERO) */}
+              {/* Section 2: Daily Challenge Card (HERO) */}
               <div className="mt-10 animate-card">
                 <div className="rounded-2xl bg-theme-bg p-8 lg:p-12 border-4 border-theme-dark-text shadow-[8px_8px_0px_#342D26]">
                   <p className="text-sm font-bold text-theme-orange uppercase tracking-wider">
@@ -470,13 +463,6 @@ export default function DashboardPage() {
             <div className="flex items-center justify-center gap-2 py-2 px-3 bg-theme-orange/10 rounded-lg border border-dashed border-theme-orange/50">
               <span>⏰</span>
               <p className="text-theme-orange font-bold text-xs">Complete before midnight!</p>
-            </div>
-
-            {/* Goal */}
-            <div className="text-center">
-              <p className="text-sm text-theme-dark-text font-bold">
-                Today&apos;s Goal: <span className="text-theme-orange">0/1</span> quiz ⭕
-              </p>
             </div>
 
             {/* Challenge Card */}
